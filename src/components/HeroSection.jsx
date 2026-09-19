@@ -24,10 +24,6 @@ export default function HeroSection({ onScrollToRoster }) {
         <h1 className="hero-minimal-title">
           <span>TEAM</span> <span className="hero-highlight">PLOV</span>
         </h1>
-        <p className="hero-minimal-desc">
-          Official 5-Stack Squadron // Steam Matchmaking Analytics
-        </p>
-
       </div>
 
       <div
