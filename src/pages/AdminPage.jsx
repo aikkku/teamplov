@@ -14,7 +14,9 @@ import {
   BarChart2,
   Key,
   Flame,
-  AlertCircle
+  AlertCircle,
+  Camera,
+  Crosshair
 } from 'lucide-react';
 import { getAdminConfig, saveAdminConfig, resetAdminConfig } from '../services/adminConfig';
 import { playClickSound, playEngageSound } from '../utils/audio';
@@ -50,6 +52,27 @@ export default function AdminPage({ onReturnToSite }) {
         },
       },
     }));
+  };
+
+  const handleGlobalPhotoTheme = (theme) => {
+    playClickSound();
+    setConfig((prev) => {
+      const updatedPlayers = {};
+      Object.keys(prev.players || {}).forEach((pid) => {
+        updatedPlayers[pid] = {
+          ...prev.players[pid],
+          photoType: theme,
+        };
+      });
+      return {
+        ...prev,
+        general: {
+          ...prev.general,
+          photoTheme: theme,
+        },
+        players: updatedPlayers,
+      };
+    });
   };
 
   const handlePresetSelect = (playerId, preset) => {
@@ -193,16 +216,46 @@ export default function AdminPage({ onReturnToSite }) {
           {activeTab === 'players' && (
             <div className="admin-section-block">
               <div className="section-intro">
-                <h2>PLAYER DETAILS DISPLAY CONFIGURATION</h2>
+                <h2>PLAYER DETAILS & PHOTO CONFIGURATION</h2>
                 <p>
-                  Choose whether clicking each player reveals their full live <strong>Leetify Stats</strong> or a <strong>Big Custom Message</strong> (e.g. <em>"NOT READY YET"</em>).
+                  Switch between <strong>Real Photos</strong> and <strong>Soldier (AI) Operatives</strong>, and choose whether clicking each player reveals their full live <strong>Leetify Stats</strong> or a <strong>Big Custom Message</strong>.
                 </p>
+
+                {/* Global Photo Theme Switcher Banner */}
+                <div className="global-theme-switcher-banner">
+                  <div className="theme-banner-label">
+                    <span className="theme-title font-mono">SQUAD PHOTO THEME:</span>
+                    <span className="theme-desc font-mono">SWITCH ALL PLAYERS IN ONE CLICK</span>
+                  </div>
+                  <div className="segmented-toggle large-toggle">
+                    <button
+                      type="button"
+                      className={`toggle-btn interactive-target ${(config.general?.photoTheme || 'soldier') === 'real' ? 'active-mode' : ''}`}
+                      onClick={() => handleGlobalPhotoTheme('real')}
+                    >
+                      <Camera size={14} />
+                      <span>REAL PHOTOS</span>
+                    </button>
+                    <button
+                      type="button"
+                      className={`toggle-btn interactive-target ${(config.general?.photoTheme || 'soldier') === 'soldier' ? 'active-mode' : ''}`}
+                      onClick={() => handleGlobalPhotoTheme('soldier')}
+                    >
+                      <Crosshair size={14} />
+                      <span>SOLDIER (AI)</span>
+                    </button>
+                  </div>
+                </div>
               </div>
 
               <div className="admin-players-grid">
                 {playerList.map((player) => {
                   const isCustom = player.detailsMode === 'custom_message';
-                  const playerImg = `${import.meta.env.BASE_URL}${player.image || 'images/default.jpg'}`;
+                  const isAiPhoto = (player.photoType || config.general?.photoTheme || 'soldier') === 'soldier';
+                  const activeImgPath = isAiPhoto
+                    ? (player.imageAi || player.image || 'images/default.jpg')
+                    : (player.image || 'images/default.jpg');
+                  const playerImg = `${import.meta.env.BASE_URL}${activeImgPath}`;
 
                   return (
                     <div key={player.id} className="admin-player-card">
@@ -211,6 +264,7 @@ export default function AdminPage({ onReturnToSite }) {
                         <div
                           className="player-avatar-thumb"
                           style={{ backgroundImage: `url(${playerImg})` }}
+                          title={`Active: ${activeImgPath}`}
                         />
                         <div className="player-meta-info">
                           <span className="player-callsign font-mono">{player.callsign}</span>
@@ -218,26 +272,52 @@ export default function AdminPage({ onReturnToSite }) {
                           <span className="player-role-badge font-mono">{player.role}</span>
                         </div>
 
-                        {/* MODE SELECTOR */}
-                        <div className="mode-toggle-group">
-                          <span className="toggle-label font-mono">ON CLICK DISPLAY:</span>
-                          <div className="segmented-toggle">
-                            <button
-                              type="button"
-                              className={`toggle-btn interactive-target ${!isCustom ? 'active-mode' : ''}`}
-                              onClick={() => handlePlayerChange(player.id, 'detailsMode', 'stats')}
-                            >
-                              <BarChart2 size={13} />
-                              <span>STATS</span>
-                            </button>
-                            <button
-                              type="button"
-                              className={`toggle-btn interactive-target ${isCustom ? 'active-mode' : ''}`}
-                              onClick={() => handlePlayerChange(player.id, 'detailsMode', 'custom_message')}
-                            >
-                              <MessageSquare size={13} />
-                              <span>BIG MESSAGE</span>
-                            </button>
+                        {/* TOGGLES CONTAINER */}
+                        <div className="player-header-toggles">
+                          {/* PHOTO TYPE SELECTOR */}
+                          <div className="mode-toggle-group">
+                            <span className="toggle-label font-mono">PICTURE:</span>
+                            <div className="segmented-toggle">
+                              <button
+                                type="button"
+                                className={`toggle-btn interactive-target ${!isAiPhoto ? 'active-mode' : ''}`}
+                                onClick={() => handlePlayerChange(player.id, 'photoType', 'real')}
+                              >
+                                <Camera size={13} />
+                                <span>REAL</span>
+                              </button>
+                              <button
+                                type="button"
+                                className={`toggle-btn interactive-target ${isAiPhoto ? 'active-mode' : ''}`}
+                                onClick={() => handlePlayerChange(player.id, 'photoType', 'soldier')}
+                              >
+                                <Crosshair size={13} />
+                                <span>SOLDIER (AI)</span>
+                              </button>
+                            </div>
+                          </div>
+
+                          {/* ON CLICK MODE SELECTOR */}
+                          <div className="mode-toggle-group">
+                            <span className="toggle-label font-mono">ON CLICK DISPLAY:</span>
+                            <div className="segmented-toggle">
+                              <button
+                                type="button"
+                                className={`toggle-btn interactive-target ${!isCustom ? 'active-mode' : ''}`}
+                                onClick={() => handlePlayerChange(player.id, 'detailsMode', 'stats')}
+                              >
+                                <BarChart2 size={13} />
+                                <span>STATS</span>
+                              </button>
+                              <button
+                                type="button"
+                                className={`toggle-btn interactive-target ${isCustom ? 'active-mode' : ''}`}
+                                onClick={() => handlePlayerChange(player.id, 'detailsMode', 'custom_message')}
+                              >
+                                <MessageSquare size={13} />
+                                <span>BIG MESSAGE</span>
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>

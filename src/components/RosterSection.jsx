@@ -86,7 +86,12 @@ export default function RosterSection({ selectedPlayerId, onSelectPlayer, onClos
           const winrate = profile?.winrate !== undefined ? `${(profile.winrate * 100).toFixed(0)}%` : '--';
           const aimScore = rating.aim !== undefined ? Math.round(rating.aim) : '--';
 
-          const imageSrc = `${import.meta.env.BASE_URL}${player.image || 'images/default.jpg'}`;
+          const playerConfig = adminConfig.players?.[player.id] || {};
+          const photoType = playerConfig.photoType || adminConfig.general?.photoTheme || 'soldier';
+          const activeImage = photoType === 'soldier'
+            ? (playerConfig.imageAi || player.imageAi || playerConfig.image || player.image)
+            : (playerConfig.image || player.image);
+          const imageSrc = `${import.meta.env.BASE_URL}${activeImage || 'images/default.jpg'}`;
 
           return (
             <div

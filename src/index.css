@@ -1241,12 +1241,54 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.12em;
 }
 
-.mode-toggle-group {
+.player-header-toggles {
   margin-left: auto;
   display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mode-toggle-group {
+  display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.global-theme-switcher-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: rgba(18, 25, 31, 0.9);
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+
+.theme-banner-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.theme-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-light);
+  letter-spacing: 0.1em;
+}
+
+.theme-desc {
+  font-size: 11px;
+  color: var(--c-slate);
+  letter-spacing: 0.05em;
+}
+
+.large-toggle .toggle-btn {
+  padding: 9px 20px;
+  font-size: 12px;
 }
 
 .toggle-label {

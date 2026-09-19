@@ -19,6 +19,7 @@ export const ROSTER_PLAYERS = [
     role: "SUPPORT / ANCHOR",
     favoriteWeapon: "M4A1-S / MP9",
     image: "images/kefir.jpg",
+    imageAi: "images/kefir_ai.jpg",
     accentColor: "#4A7B6F",
     bio: "Site lockdown specialist and primary flashbang distributor. Survives the toughest B site pushes with disciplined crosshair placement."
   },
@@ -30,6 +31,7 @@ export const ROSTER_PLAYERS = [
     role: "AWPER",
     favoriteWeapon: "AWP / DEAGLE",
     image: "images/default.jpg",
+    imageAi: "images/toaster_ai.jpg",
     accentColor: "#4A7B6F",
     bio: "Primary squadron sniper. Commands long sightlines with lightning reaction times and locks down key chokepoints."
   },
@@ -41,6 +43,7 @@ export const ROSTER_PLAYERS = [
     role: "ENTRY FRAGGER",
     favoriteWeapon: "AK-47 / GALIL",
     image: "images/ayla.jpg",
+    imageAi: "images/ayla_ai.jpg",
     accentColor: "#4A7B6F",
     bio: "First boots into bombsites. Aggressive entry fragger who cracks open enemy defenses and creates map control."
   },
@@ -52,6 +55,7 @@ export const ROSTER_PLAYERS = [
     role: "IGL / RIFLER",
     favoriteWeapon: "AK-47 / M4A4",
     image: "images/thechasm.jpg",
+    imageAi: "images/thechasm_ai.jpg",
     accentColor: "#4A7B6F",
     bio: "Tactical in-game leader and mid-round caller. Master of utility coordination and clutch post-plant setups."
   },
@@ -63,6 +67,7 @@ export const ROSTER_PLAYERS = [
     role: "STAND-IN / FLEX",
     favoriteWeapon: "AK-47 / SSG 08",
     image: "images/default.jpg",
+    imageAi: "images/default.jpg",
     accentColor: "#4A7B6F",
     bio: "Unknown operative awaiting deployment. Fifth slot reserved for active squad rotation."
   }
