@@ -294,14 +294,14 @@ export const MOCK_PROFILES = {
     ]
   },
 
-  "76561197969209908": {
+  "76561198774745327": {
     "privacy_mode": "public",
     "winrate": 0.6429,
     "total_matches": 2361,
     "first_match_date": "2020-01-01T19:08:39.000Z",
     "name": "toaster",
     "bans": [],
-    "steam64_id": "76561197969209908",
+    "steam64_id": "76561198774745327",
     "id": "e50a982e-d8ec-4627-996f-017ed9d7162e",
     "ranks": {
       "leetify": 2.12,
@@ -417,7 +417,7 @@ export const MOCK_PROFILES = {
     ],
     "recent_teammates": [
       { "steam64_id": "76561198714483889", "recent_matches_count": 14 },
-      { "steam64_id": "76561198774745327", "recent_matches_count": 18 }
+      { "steam64_id": "76561199504207869", "recent_matches_count": 18 }
     ]
   },
 
@@ -543,18 +543,18 @@ export const MOCK_PROFILES = {
     ],
     "recent_teammates": [
       { "steam64_id": "76561198714483889", "recent_matches_count": 12 },
-      { "steam64_id": "76561197969209908", "recent_matches_count": 18 }
+      { "steam64_id": "76561198774745327", "recent_matches_count": 18 }
     ]
   },
 
-  "76561198774745327": {
+  "76561197969209908": {
     "privacy_mode": "public",
     "winrate": 0.4615,
     "total_matches": 512,
     "first_match_date": "2023-01-18T10:11:00.000Z",
     "name": "TheChasm",
     "bans": [],
-    "steam64_id": "76561198774745327",
+    "steam64_id": "76561197969209908",
     "id": "33b2110c-55fa-42e1-9311-8971fa882001",
     "ranks": {
       "leetify": 0.88,
@@ -762,7 +762,7 @@ export const MOCK_PROFILES = {
       }
     ],
     "recent_teammates": [
-      { "steam64_id": "76561197969209908", "recent_matches_count": 22 },
+      { "steam64_id": "76561198714483889", "recent_matches_count": 22 },
       { "steam64_id": "76561198774745327", "recent_matches_count": 16 }
     ]
   }
