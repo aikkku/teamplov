@@ -16,6 +16,7 @@
     "matchLimit": 15,
     "matchFilterDefault": "all",
     "crosshairCursor": true,
+    "photoTheme": "soldier",
     "cloudSyncUrl": "",
     "cloudSyncKey": ""
   },
