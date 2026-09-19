@@ -421,14 +421,14 @@ export const MOCK_PROFILES = {
     ]
   },
 
-  "76561198774745327": {
+  "76561199504207869": {
     "privacy_mode": "public",
     "winrate": 0.5333,
     "total_matches": 842,
     "first_match_date": "2022-04-10T15:20:00.000Z",
     "name": "Ayla",
     "bans": [],
-    "steam64_id": "76561198774745327",
+    "steam64_id": "76561199504207869",
     "id": "99c1e13a-78df-4a88-8422-9011de35fba1",
     "ranks": {
       "leetify": 1.45,
@@ -547,14 +547,14 @@ export const MOCK_PROFILES = {
     ]
   },
 
-  "76561199504207869": {
+  "76561198774745327": {
     "privacy_mode": "public",
     "winrate": 0.4615,
     "total_matches": 512,
     "first_match_date": "2023-01-18T10:11:00.000Z",
     "name": "TheChasm",
     "bans": [],
-    "steam64_id": "76561199504207869",
+    "steam64_id": "76561198774745327",
     "id": "33b2110c-55fa-42e1-9311-8971fa882001",
     "ranks": {
       "leetify": 0.88,
@@ -653,7 +653,7 @@ export const MOCK_PROFILES = {
     ],
     "recent_teammates": [
       { "steam64_id": "76561198714483889", "recent_matches_count": 4 },
-      { "steam64_id": "76561198774745327", "recent_matches_count": 9 }
+      { "steam64_id": "76561199504207869", "recent_matches_count": 9 }
     ]
   },
 

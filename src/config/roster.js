@@ -35,7 +35,7 @@ export const ROSTER_PLAYERS = [
   },
   {
     id: "ayla",
-    steam64_id: "76561198774745327",
+    steam64_id: "76561199504207869",
     name: "Ayla",
     callsign: "OP-03",
     role: "ENTRY FRAGGER",
@@ -46,7 +46,7 @@ export const ROSTER_PLAYERS = [
   },
   {
     id: "thechasm",
-    steam64_id: "76561199504207869",
+    steam64_id: "76561198774745327",
     name: "TheChasm",
     callsign: "OP-04",
     role: "IGL / RIFLER",
