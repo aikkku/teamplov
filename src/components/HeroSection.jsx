@@ -28,15 +28,6 @@ export default function HeroSection({ onScrollToRoster }) {
           Official 5-Stack Squadron // Steam Matchmaking Analytics
         </p>
 
-        <div className="hero-minimal-actions">
-          <button
-            className="btn-minimal-highlight interactive-target"
-            onClick={handleCtaClick}
-          >
-            <span>ROSTER</span>
-            <ChevronDown size={16} />
-          </button>
-        </div>
       </div>
 
       <div
