@@ -1,0 +1,84 @@
+{
+  "teamInfo": {
+    "name": "TEAM PLOV",
+    "tag": "PLOV",
+    "region": "EU / CENTRAL ASIA",
+    "status": "ACTIVE OPERATIONAL",
+    "focus": "STEAM MATCHMAKING ONLY",
+    "motto": "SERVED PIPING HOT // NO PITY FOR RUSH B"
+  },
+  "announcement": {
+    "enabled": false,
+    "text": "NEXT MATCH: TONIGHT AT 21:00 UTC // PRACTICE SESSION",
+    "type": "info"
+  },
+  "general": {
+    "matchLimit": 15,
+    "matchFilterDefault": "all",
+    "crosshairCursor": true,
+    "cloudSyncUrl": "",
+    "cloudSyncKey": ""
+  },
+  "players": {
+    "kefir": {
+      "id": "kefir",
+      "name": "kefir",
+      "role": "SUPPORT / ANCHOR",
+      "callsign": "OP-01",
+      "steam64_id": "76561198714483889",
+      "favoriteWeapon": "M4A1-S / MP9",
+      "image": "images/kefir.jpg",
+      "detailsMode": "stats",
+      "customMessage": "NOT READY YET",
+      "customMessageSub": "OPERATIVE PROFILE UNDER RECALIBRATION"
+    },
+    "toaster": {
+      "id": "toaster",
+      "name": "toaster",
+      "role": "AWPER",
+      "callsign": "OP-02",
+      "steam64_id": "76561197969209908",
+      "favoriteWeapon": "AWP / DEAGLE",
+      "image": "images/default.jpg",
+      "detailsMode": "custom_message",
+      "customMessage": "NOT READY YET",
+      "customMessageSub": "WARMING UP IN AIM_BOTZ"
+    },
+    "ayla": {
+      "id": "ayla",
+      "name": "Ayla",
+      "role": "ENTRY FRAGGER",
+      "callsign": "OP-03",
+      "steam64_id": "76561198774745327",
+      "favoriteWeapon": "AK-47 / GALIL",
+      "image": "images/default.jpg",
+      "detailsMode": "custom_message",
+      "customMessage": "NOT READY YET",
+      "customMessageSub": "DRILLING ENTRY DUELS"
+    },
+    "thechasm": {
+      "id": "thechasm",
+      "name": "TheChasm",
+      "role": "IGL / RIFLER",
+      "callsign": "OP-04",
+      "steam64_id": "76561199504207869",
+      "favoriteWeapon": "AK-47 / M4A4",
+      "image": "images/default.jpg",
+      "detailsMode": "custom_message",
+      "customMessage": "NOT READY YET",
+      "customMessageSub": "RECALIBRATING UTILITY LINEUPS"
+    },
+    "mystery": {
+      "id": "mystery",
+      "name": "???",
+      "role": "STAND-IN / FLEX",
+      "callsign": "OP-05",
+      "steam64_id": "76561198012345678",
+      "favoriteWeapon": "AK-47 / SSG 08",
+      "image": "images/default.jpg",
+      "detailsMode": "custom_message",
+      "customMessage": "NOT READY YET",
+      "customMessageSub": "OPERATIVE CLASSIFIED // DEPLOYMENT PENDING"
+    }
+  }
+}
