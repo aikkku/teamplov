@@ -40,7 +40,7 @@ export const ROSTER_PLAYERS = [
     callsign: "OP-03",
     role: "ENTRY FRAGGER",
     favoriteWeapon: "AK-47 / GALIL",
-    image: "images/default.jpg",
+    image: "images/ayla.jpg",
     accentColor: "#4A7B6F",
     bio: "First boots into bombsites. Aggressive entry fragger who cracks open enemy defenses and creates map control."
   },
