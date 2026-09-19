@@ -51,7 +51,7 @@ export const ROSTER_PLAYERS = [
     callsign: "OP-04",
     role: "IGL / RIFLER",
     favoriteWeapon: "AK-47 / M4A4",
-    image: "images/default.jpg",
+    image: "images/thechasm.jpg",
     accentColor: "#4A7B6F",
     bio: "Tactical in-game leader and mid-round caller. Master of utility coordination and clutch post-plant setups."
   },
