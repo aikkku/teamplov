@@ -8,7 +8,7 @@ export default function HeroSection({ onScrollToRoster }) {
     onScrollToRoster();
   };
 
-  const bgUrl = `${import.meta.env.BASE_URL}images/bg.jpg`;
+  const bgUrl = `${import.meta.env.BASE_URL}images/bg.jpg?v=2`;
 
   return (
     <section
@@ -16,7 +16,7 @@ export default function HeroSection({ onScrollToRoster }) {
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(8, 11, 14, 0.2) 0%, rgba(8, 11, 14, 0.1) 30%, rgba(8, 11, 14, 0.45) 60%, rgba(8, 11, 14, 0.88) 82%, rgba(8, 11, 14, 0.98) 100%), url(${bgUrl})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center 20%',
+        backgroundPosition: 'center 10%',
       }}
     >
       <div className="hero-minimal-content bottom-center">
