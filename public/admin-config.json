@@ -29,6 +29,7 @@
       "steam64_id": "76561198714483889",
       "favoriteWeapon": "M4A1-S / MP9",
       "image": "images/kefir.jpg",
+      "imageAi": "images/kefir_ai.jpg",
       "detailsMode": "stats",
       "customMessage": "NOT READY YET",
       "customMessageSub": "OPERATIVE PROFILE UNDER RECALIBRATION"
@@ -40,7 +41,8 @@
       "callsign": "OP-02",
       "steam64_id": "76561198774745327",
       "favoriteWeapon": "AWP / DEAGLE",
-      "image": "images/default.jpg",
+      "image": "images/toaster.jpg",
+      "imageAi": "images/toaster_ai.jpg",
       "detailsMode": "stats",
       "customMessage": "NOT READY YET",
       "customMessageSub": "WARMING UP IN AIM_BOTZ"
@@ -53,6 +55,7 @@
       "steam64_id": "76561199504207869",
       "favoriteWeapon": "AK-47 / GALIL",
       "image": "images/ayla.jpg",
+      "imageAi": "images/ayla_ai.jpg",
       "detailsMode": "stats",
       "customMessage": "NOT READY YET",
       "customMessageSub": "DRILLING ENTRY DUELS"
@@ -65,18 +68,20 @@
       "steam64_id": "76561197969209908",
       "favoriteWeapon": "AK-47 / M4A4",
       "image": "images/thechasm.jpg",
+      "imageAi": "images/thechasm_ai.jpg",
       "detailsMode": "custom_message",
       "customMessage": "NOT READY YET",
       "customMessageSub": "RECALIBRATING UTILITY LINEUPS"
     },
-    "mystery": {
-      "id": "mystery",
-      "name": "???",
+    "mitka219": {
+      "id": "mitka219",
+      "name": "mitka219",
       "role": "STAND-IN / FLEX",
       "callsign": "OP-05",
       "steam64_id": "76561198012345678",
       "favoriteWeapon": "AK-47 / SSG 08",
-      "image": "images/default.jpg",
+      "image": "images/mitka219.jpg",
+      "imageAi": "images/mitka219_ai.jpg",
       "detailsMode": "custom_message",
       "customMessage": "NOT READY YET",
       "customMessageSub": "OPERATIVE CLASSIFIED // DEPLOYMENT PENDING"

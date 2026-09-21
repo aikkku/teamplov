@@ -30,7 +30,7 @@ export const ROSTER_PLAYERS = [
     callsign: "OP-02",
     role: "AWPER",
     favoriteWeapon: "AWP / DEAGLE",
-    image: "images/default.jpg",
+    image: "images/toaster.jpg",
     imageAi: "images/toaster_ai.jpg",
     accentColor: "#4A7B6F",
     bio: "Primary squadron sniper. Commands long sightlines with lightning reaction times and locks down key chokepoints."
@@ -60,15 +60,15 @@ export const ROSTER_PLAYERS = [
     bio: "Tactical in-game leader and mid-round caller. Master of utility coordination and clutch post-plant setups."
   },
   {
-    id: "mystery",
+    id: "mitka219",
     steam64_id: "76561198012345678",
-    name: "???",
+    name: "mitka219",
     callsign: "OP-05",
     role: "STAND-IN / FLEX",
     favoriteWeapon: "AK-47 / SSG 08",
-    image: "images/default.jpg",
-    imageAi: "images/default.jpg",
+    image: "images/mitka219.jpg",
+    imageAi: "images/mitka219_ai.jpg",
     accentColor: "#4A7B6F",
-    bio: "Unknown operative awaiting deployment. Fifth slot reserved for active squad rotation."
+    bio: "Squad operative and flex specialist for Team Plov. Fifth slot in active squad rotation."
   }
 ];

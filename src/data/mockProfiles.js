@@ -662,7 +662,7 @@ export const MOCK_PROFILES = {
     "winrate": 0.5892,
     "total_matches": 1180,
     "first_match_date": "2021-08-20T17:40:00.000Z",
-    "name": "???",
+    "name": "mitka219",
     "bans": [],
     "steam64_id": "76561198012345678",
     "id": "77a8894b-1234-5678-90ab-cdef12345678",

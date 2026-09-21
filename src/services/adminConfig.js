@@ -34,9 +34,9 @@ const DEFAULT_CONFIG = {
       image: player.image,
       imageAi: player.imageAi,
       photoType: 'soldier',
-      detailsMode: player.id === 'mystery' ? 'custom_message' : 'stats',
+      detailsMode: (player.id === 'mitka219' || player.id === 'mystery') ? 'custom_message' : 'stats',
       customMessage: 'NOT READY YET',
-      customMessageSub: player.id === 'mystery' ? 'OPERATIVE CLASSIFIED // DEPLOYMENT PENDING' : 'PROFILE UNDER RECALIBRATION',
+      customMessageSub: (player.id === 'mitka219' || player.id === 'mystery') ? 'OPERATIVE CLASSIFIED // DEPLOYMENT PENDING' : 'PROFILE UNDER RECALIBRATION',
     };
     return acc;
   }, {}),
